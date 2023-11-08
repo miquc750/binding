@@ -2,10 +2,11 @@ body {
     font-size: var(--font-size);
     padding: 20px;
     max-width: 35rem;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 
 h1, h2, h3 {
     font-family: var(--font-display);
     margin-bottom: var(--spacing);
-    
 }
