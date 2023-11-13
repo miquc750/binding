@@ -11,10 +11,22 @@ body {
     max-width: 35rem;
     -webkit-hyphens: auto;
     hyphens: auto;
+    margin-bottom: var(--spacing);
 }
 
 h1, h2, h3 {
     font-family: var(--font-display);
-    margin-bottom: var(--spacing);
+    margin-bottom: calc(var(--spacing) * 2);
+}
+
+h1 {
+    font-size: calc(var(--font-size) * 4);
+}
+
+h2 {
+    font-size: calc(var(--font-size) * 3);
+}
+
+h3 {
     font-size: calc(var(--font-size) * 2);
 }
