@@ -115,6 +115,7 @@ cite {
 .you {
     display: var(--you-display);
     flex-wrap: wrap;
+    width:100%
 }
 
 .spacing {
