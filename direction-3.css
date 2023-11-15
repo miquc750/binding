@@ -4,5 +4,17 @@
     --font: "Nobile";
     --font-display: "Chakra Petch";
     --font-size: 16px;
+    --font-weight: 300;
     --spacing: 16px;
+    --background: white;
+    --h1-color: white;
+    --display-color: black;
+    --body-color: black;
+    --border: 1px solid black;
+    --stroke-width: 1px;
+    --stroke-color: black;
+    --you-display: flex;
 }
+
+
+

@@ -4,5 +4,11 @@
     --font: "Bricolage Grotesque";
     --font-display: "Sansita Swashed" ;
     --font-size: 16px;
+    --font-weight: 300;
     --spacing: 16px;
+    --background: #2B00A4;
+    --h1-color: #A532FF;
+    --display-color: #A532FF;
+    --body-color: #FBF3B0;
+    --line-height: 1.5;
 }

@@ -4,5 +4,10 @@
     --font: "Alike Angular";
     --font-display: "Homemade Apple";
     --font-size: 16px;
+    --font-weight: 300;
     --spacing: 16px;
+    --background: #E0D5BB;
+    --h1-color: #35353A;
+    --display-color: #35353A;
+    --body-color: #35353A;
 }
