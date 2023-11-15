@@ -49,6 +49,7 @@ span {
 
 body p {
     max-width: 35rem;
+    line-height: var(--line-height);
 }
 
 h1, h2, h3 {
@@ -101,6 +102,7 @@ aside {
 
 blockquote {
     border: var(--border);
+    padding: calc(var(--spacing)*3);
 }
 
 cite {
