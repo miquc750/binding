@@ -20,7 +20,7 @@ nav ul{
 }
 
 header {
-    padding: var(--spacing) 0px var(--spacing) var(--spacing);
+    padding: calc(var(--spacing)*2);
     border: var(--border);
 }
 
@@ -44,7 +44,7 @@ span {
 
 .intro > section, .intro > aside {
     flex-grow: 1;
-    padding: 32px;
+    padding: calc(var(--spacing)*2);
 }
 
 body p {
