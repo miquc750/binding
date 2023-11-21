@@ -13,6 +13,8 @@
     .index {
         background-color: var(--white);
         color: var(--black); 
+        margin-left: var(--spacing);
+        margin-right: var(--spacing);
     }
 
     .pink {
@@ -99,6 +101,17 @@
         border-bottom: 0px;
     }
 
+    ol li {
+        list-style-type: "✽";
+        list-style-position: outside;
+        margin-left: 2em;
+        color: var(--black);
+    }
+
+    ol p {
+        padding-left: 4px; 
+    }
+
     /* links */
 
     a {
@@ -108,7 +121,8 @@
 
     a:hover {
         font-weight: 500;
-        transform: scale(1.5);
+        background-color: var(--green);
+        transition: all 200ms linear;
     }
 
     a:active {
@@ -124,22 +138,34 @@
         padding-bottom: calc(var(--spacing)*5);
     }
 
+    main {
+        padding-top: calc(var(--spacing)*3);
+        padding-bottom: calc(var(--spacing)*3);
+    }
+
+    .index header {
+        border-bottom: 1px black solid;
+    }
+
     ul {
         min-width: fit-content;
+        padding-bottom: var(--spacing);
     }
 
     footer {
-        padding: calc(var(--spacing)*3) var(--spacing) var(--spacing) var(--spacing);
+        padding: calc(var(--spacing)*3) var(--spacing) calc(var(--spacing)*2) var(--spacing);
         margin: 0;
-        min-width: 100%;
-        width: fit-content;
     }
 
-    footer p {
-        min-width: 100%;
-        width: fit-content;
+    .index footer {
+        padding-left: 0px;
+        border-top: 1px solid black;
     }
 
+    .index footer>p {
+        margin-left: 0px;
+        text-align:left;
+    }
 
     /* Menus and navigation */
 
@@ -163,6 +189,9 @@
         padding-bottom: 0px;
     }
 
+    /* animations */
+
+
 /* desktop */
 
     @media (min-width: 768px) {
@@ -184,9 +213,28 @@
 
         /* layouts */
 
-        header {
+        header:not(.index header) {
+            padding: calc(var(--spacing)*5) calc(var(--spacing)*5) calc(var(--spacing)*6) calc(var(--spacing)*5);
+        }
+
+        .index .columns {
+            padding: calc(var(--spacing)*5);
+        }
+
+        .index header {
             padding-top: calc(var(--spacing)*5);
+            margin-right: calc(var(--spacing)*5);
             padding-bottom: calc(var(--spacing)*6);
+            margin-left: calc(var(--spacing)*5);
+            border-bottom: 1px black solid;
+        }   
+
+        .index footer {
+            padding-top: calc(var(--spacing)*3);
+            margin-right: calc(var(--spacing)*5);
+            padding-bottom: calc(var(--spacing)*3);
+            margin-left: calc(var(--spacing)*5);
+            border-top: 1px black solid;
         }
         
         .columns {
@@ -195,18 +243,30 @@
             gap: 5%
         }
 
+        .columns span {
+            height: 1;
+            min-width: fit-content;
+        }
+
+        span>ul {
+            position: fixed;
+            top: 0px;
+            min-width: fit-content;
+        }
+
         .text-columns {
             columns: 2;
             column-gap: 5%;
         }
 
-        .flex-columns {
-            display: flex;
-            flex-direction: row;
+        .grid-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 5%;
+            padding-bottom: calc(var(--spacing)*3);
         }
         
-        .flex-columns section {
+        .grid-columns section {
             flex: 1;
         }
 
@@ -215,9 +275,7 @@
         }
 
         footer {
-            width: 100%;
-            padding-top: calc(var(--spacing)*4);
-            padding-bottom: var(--spacing)*2;
+            padding: calc(var(--spacing)*4) var(--spacing) calc(var(--spacing)*3) var(--spacing);
             margin-left: auto;
             margin-right: auto;
         }
