@@ -5,12 +5,46 @@
     html {
         text-wrap: balance;
         background-color: var(--dark-purple);
+        color: var(--pink);
+    }
+
+    section {
         padding: calc(var(--spacing) *2) var(--spacing) calc(var(--spacing) *2) var(--spacing);
     }
 
     .index {
         background-color: var(--white);
         color: var(--black); 
+    }
+
+    .pink {
+        background-color: var(--background-pink);
+        color: var(--white);
+    }
+
+    .pink h2, .pink h3 {
+        color: var(--dark-pink);       
+    }
+
+    .green {
+        background-color: var(--background-green);
+    }
+
+    .green h2, .green h3 {
+        color: var(--green);     
+    }
+
+    .green p {
+        color: var(--black);
+    }
+
+    .blue {
+        background-color: var(--background-blue);
+        color: var(--black);
+    }
+
+    .blue h2, .blue h3 {
+        color: var(--blue);       
     }
 
     /* text styling */
