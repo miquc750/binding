@@ -110,6 +110,9 @@
     blockquote {
         font-family: "Sassy Frass";
         font-size: calc(var(--font-size)*2);
+        max-width: 32em;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     blockquote cite {
@@ -191,11 +194,13 @@
     /* Menus and navigation */
 
     nav ul{
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-between;
-    border: var(--border);
-    padding: var(--spacing);
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-between;
+        border: var(--border);
+        padding: var(--spacing);
+        background-color: var(--dark-purple);
+        z-index: 1000;
     }
 
     .header-menu {
@@ -208,6 +213,11 @@
         position: sticky;
         bottom: 0%;
         padding-bottom: 0px;
+        margin
+    }
+
+    nav p {
+        margin-bottom: 0px;
     }
 
     /* animations */
@@ -233,6 +243,17 @@
         }
 
         /* layouts */
+
+        nav ul {
+            padding: 1% 5% 1% 5%;
+        }
+
+        p {
+            font-size: calc(var(--font-size)*1.1);
+            max-width: 56em;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         header:not(.index header) {
             padding: calc(var(--spacing)*5) calc(var(--spacing)*5) calc(var(--spacing)*6) calc(var(--spacing)*5);
@@ -285,7 +306,8 @@
             grid-template-columns: 1fr 1fr;
             gap: 5%;
             padding-bottom: calc(var(--spacing)*3);
-            min-height:fit-content; 
+            height: fit-content; 
+            min-height: fit-content; 
         }
         
         .grid-columns section {
@@ -310,6 +332,21 @@
 
         .columns ul {
             position: sticky;
+        }
+
+        .sticky {
+            position: sticky;
+            top: var(--spacing);
+            z-index: 0;
+        }
+
+        h3.sticky {
+            font-size: calc(var(--font-size)*4);
+        }
+
+        .extra-padding {
+            margin-top: 24rem;
+            padding-bottom: 6rem;
         }
 
     }
