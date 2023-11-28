@@ -60,6 +60,28 @@
         color: var(--blue);       
     }
 
+        /*You section grid */
+
+        .grid > section:first-child, .grid > section:nth-child(3), .grid > section:nth-child(5), .grid > section:nth-child(7) {
+            background-color: var(--background-pink);
+            color: var(--white);
+            padding: calc(var(--spacing) *2) var(--spacing) calc(var(--spacing) *2) var(--spacing);
+        }
+
+        .grid > section:nth-child(2), .grid > section:nth-child(4), .grid > section:nth-child(6), .grid > section:nth-child(8) {
+            background-color: var(--dark-purple);
+            color: var(--white);
+            padding: calc(var(--spacing) *2) var(--spacing) calc(var(--spacing) *2) var(--spacing);
+        }
+
+        .grid > section:first-child h3, .grid > section:nth-child(3) h3,  .grid > section:nth-child(5) h3, .grid > section:nth-child(7) h3  {
+            color: var(--dark-pink);       
+        }
+
+        .grid > section:nth-child(2) h3,  .grid > section:nth-child(4) h3, .grid > section:nth-child(6) h3, .grid > section:nth-child(8) h3  {
+            color: var(--pink);       
+        }
+        
     /* text styling */
 
     p {
@@ -145,6 +167,7 @@
         padding-left: 4px; 
     }
 
+
     /* links */
 
     a {
@@ -182,6 +205,8 @@
     .columns > div:last-child {
         padding-bottom: calc(var(--spacing)*2);
     }
+
+    
 
     ul {
         min-width: fit-content;
@@ -270,6 +295,30 @@
             font-size: calc(var(--font-size) *2);
         }
 
+        /* colors and backgrounds */
+
+            /*You section grid */
+
+            .grid > section:nth-child(2), .grid > section:nth-child(3), .grid > section:nth-child(6), .grid > section:nth-child(7) {
+                background-color: var(--background-pink);
+                color: var(--white);
+                padding: calc(var(--spacing) *2) var(--spacing) calc(var(--spacing) *2) var(--spacing);
+            }
+
+            .grid > section:nth-child(1), .grid > section:nth-child(4), .grid > section:nth-child(5), .grid > section:nth-child(8) {
+                background-color: var(--dark-purple);
+                color: var(--white);
+                padding: calc(var(--spacing) *2) var(--spacing) calc(var(--spacing) *2) var(--spacing);
+            }
+
+            .grid > section:nth-child(2) h3,  .grid > section:nth-child(4) h3, .grid > section:nth-child(6) h3, .grid > section:nth-child(8) h3  {
+                color: var(--dark-pink);       
+            }
+
+            .grid > section:nth-child(1) h3, .grid > section:nth-child(4) h3,  .grid > section:nth-child(5) h3, .grid > section:nth-child(8) h3  {
+                color: var(--pink);       
+            }
+
         /* layouts */
 
         nav ul {
@@ -348,6 +397,52 @@
             height: fit-content; 
             min-height: fit-content; 
         }
+
+        .half-grid-columns {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 1%;
+            padding-bottom: calc(var(--spacing)*3);
+            margin-left: 0px;
+            height: fit-content; 
+            min-height: fit-content; 
+            width: 50%;
+        }
+
+        .half-grid-columns h3 {
+            color: var(--blue);
+            font-size: calc(var(--font-size)*3);
+            padding: 0;
+        }
+
+        .narrow {
+            width: 10em;
+            padding:0;
+        }
+
+        .sticky-half {
+            transform: rotate(270deg);
+            position: sticky;
+            top: 30%;
+            height: fit-content;
+            width: fit-content;
+            padding: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2%; 
+            background-color: var(--dark-purple);  
+        }
+
+        .grid p {
+            padding: 0px calc(var(--spacing)*2)  calc(var(--spacing)*2) calc(var(--spacing)*2);
+        }
+
+        .grid h3 {
+            padding: calc(var(--spacing)*2) calc(var(--spacing)*2) 0px calc(var(--spacing)*2);
+        }
         
         .grid-columns section {
             flex: 1;
@@ -382,11 +477,11 @@
 
         h3.sticky {
             font-size: calc(var(--font-size)*4);
+            line-height: 1;
         }
 
         .extra-padding {
-            margin-top: 24rem;
-            padding-bottom: 6rem;
+            margin-top: 10rem;
         }
 
     }
