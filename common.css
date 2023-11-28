@@ -111,6 +111,7 @@
         font-family: "Sassy Frass";
         font-size: calc(var(--font-size)*2);
         max-width: 32em;
+        min-width: fit-content;
         margin-left: auto;
         margin-right: auto;
     }
@@ -118,6 +119,14 @@
     blockquote cite {
         font-family: "Sassy Frass";
         font-size: calc(var(--font-size)*3.5);
+    }
+
+    blockquote div {
+        width: fit-content;
+    }
+
+    blockquote p {
+        display: inline;
     }
 
 
@@ -158,8 +167,7 @@
     /* layouts */
 
     header {
-        padding-top: calc(var(--spacing)*5);
-        padding-bottom: calc(var(--spacing)*5);
+        padding: calc(var(--spacing)*5) var(--spacing) calc(var(--spacing)*5) var(--spacing);
     }
 
     main {
@@ -169,6 +177,22 @@
 
     .index header {
         border-bottom: 1px black solid;
+    }
+
+    .postmenu {
+        display: flex;
+        position: sticky;
+        top: 0px;
+        background-color: var(--white);
+        padding-top: var(--spacing);
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .author{
+        display:none;
     }
 
     ul {
@@ -213,7 +237,6 @@
         position: sticky;
         bottom: 0%;
         padding-bottom: 0px;
-        margin
     }
 
     nav p {
@@ -264,7 +287,7 @@
         }
 
         .index header {
-            padding-top: calc(var(--spacing)*5);
+            padding-top: calc(var(--spacing)*6);
             margin-right: calc(var(--spacing)*5);
             padding-bottom: calc(var(--spacing)*6);
             margin-left: calc(var(--spacing)*5);
@@ -277,6 +300,17 @@
             padding-bottom: calc(var(--spacing)*3);
             margin-left: calc(var(--spacing)*5);
             border-top: 1px black solid;
+        }
+
+        .postmenu {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            gap: 32px;
+        }
+    
+        .author{
+            display:inline-block; 
         }
         
         .columns {
