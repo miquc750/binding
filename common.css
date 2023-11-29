@@ -282,6 +282,7 @@
         justify-content: space-between;
     }
 
+
     .author{
         display:none;
     }
@@ -581,7 +582,12 @@
         .postmenu {
             display: flex;
             flex-direction: column;
+            flex:1;
+            min-height: 1vh;
+            position: sticky;
+            bottom: 0px;
             justify-content: start;
+            align-items: start;
             gap: 32px;
         }
     
@@ -713,3 +719,27 @@
         }
 
     }
+
+/* some display adjustments for the animations */
+
+@media (max-width: 768px) {
+
+    .mobile-hidden {
+        display:none;
+    }
+
+    .mobile-transparent {
+        opacity: 5%;
+    }
+
+    .mobile-sticky {
+        position: fixed;
+        top:0;
+        background-color: var(--white);
+        padding: var(--spacing) var(--spacing) var(--spacing) var(--spacing);
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--black);
+    }
+
+}

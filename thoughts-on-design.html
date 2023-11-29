@@ -13,19 +13,48 @@
         <link rel="stylesheet" href="direction-1.css">
         <!--<link rel="stylesheet" href="direction-2.css"> 
         <link rel="stylesheet" href="direction-3.css"> -->
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              // Get all elements with animations
+              const elementsWithAnimations = document.querySelectorAll(".animate");
+            
+              // Create a variable to track whether animations are paused or not
+              let animationsPaused = false;
+            
+              // Function to toggle animation pause
+              function toggleAnimations() {
+                elementsWithAnimations.forEach(function(element) {
+                  if (animationsPaused) {
+                    element.style.animationPlayState = "running";
+                  } else {
+                    element.style.animationPlayState = "paused";
+                  }
+                });
+            
+                // Toggle the state
+                animationsPaused = !animationsPaused;
+              }
+            
+              // Add a click event listener to the switcher element
+              const animationSwitcher = document.getElementById("animation-switcher");
+              animationSwitcher.addEventListener("click", toggleAnimations);
+            });
+            </script>
     </head>
 
     <body>
         <nav class="header-menu">
             <ul>
                 <li><button><p><a href="https://miquc750.github.io/binding/">Binding</a></p></button></li>
+                <li><button id="animation-switcher"><p><a>Stop Animations</a></p></button></li>
                 <!-- <li><button><p><a href="https://miquc750.github.io/binding/about.html">About</a></p></button></li> -->
             </ul>
         </nav>
 
         <header>
             <hgroup>
-                <h1 class="color-changing">Thoughts on Design</h1>
+                <h1 class="animate color-changing">Thoughts on Design</h1>
                 <h2>by Paul Rand</h2>
             </hgroup>
         </header>
@@ -49,7 +78,7 @@
                 </section>
             </section>
 
-            <section class="blue gradient-background">
+            <section class="blue animate gradient-background">
                     <section class="columns">
                         <section>
                             <h3 class="display">The Beautiful</h3>
@@ -99,7 +128,7 @@
                         <p>An erroneous conception of the graphic designer’s function is to imagine that in order to produce a “good layout" all he need do is make a pleasing arrangement of miscellaneous elements. What is implied is that this may be accomplished simply by pushing these elements around, until something happens. At best, this procedure involves the time-consuming uncertainties of trial and error, and at worst, an indifference to plan, order, or discipline.</p>
                         <p>The designer does not, as a rule, begin with some preconceived idea. Rather, the idea is (or should be) the result of careful study and observation, and the design a product of that idea. In order, therefore, to achieve an effective solution to his problem, the designer must necessarily go through some sort of mental process. Consciously or not, he analyzes, interprets, formulates. He is aware of the scientific and technological developments in his own and kindred fields. He improvises, invents, or discovers new techniques and combinations. He co-ordinates and integrates his material so that he may restate his problem in terms of ideas, signs, symbols, pictures. He unifies, simplifies, and eliminates superfluities. He symbolizes abstracts from his material by association and analogy. He intensifies and reinforces his symbol with appropriate accessories to achieve clarity and interest. He draws upon instinct and intuition. He considers the spectator, his feelings and predilections.</p>
                     </section>
-                    <span class="empty-column"><h3 class="scrolling-text">The Designer's Problem</h3><h3 class="scrolling-text">The Designer's Problem</h3><h3 class="scrolling-text">The Designer's Problem</h3><h3 class="scrolling-text">The Designer's Problem</h3><h3 class="scrolling-text">The Designer's Problem</h3><h3 class="scrolling-text">The Designer's Problem</h3><h3 class="scrolling-text">The Designer's Problem</h3><h3 class="scrolling-text">The Designer's Problem</h3><h3 class="scrolling-text">The Designer's Problem</h3></span>
+                    <span class="empty-column"><h3 class="animate scrolling-text">The Designer's Problem</h3><h3 class="animate scrolling-text">The Designer's Problem</h3><h3 class="animate scrolling-text">The Designer's Problem</h3><h3 class="animate scrolling-text">The Designer's Problem</h3><h3 class="animate scrolling-text">The Designer's Problem</h3><h3 class="animate scrolling-text">The Designer's Problem</h3><h3 class="animate scrolling-text">The Designer's Problem</h3><h3 class="animate scrolling-text">The Designer's Problem</h3><h3 class="animate scrolling-text">The Designer's Problem</h3></span>
                     <span></span>
                     <section>
                         <p>The designer is primarily confronted with three classes of material: a) the given material: product, copy, slogan, logotype, format, media, production process; b) the formal material: space, contrast, proportion, harmony, rhythm, repetition, line, mass, shape, color, weight, volume, value, texture; c) the psychological material: visual perception and optical illusion problems, the spectators’ instincts, intuitions, and emotions as well as the designer’s own needs.</p>
