@@ -139,8 +139,12 @@
     }
 
     blockquote cite {
-        font-family: "Sassy Frass";
-        font-size: calc(var(--font-size)*3.5);
+        font-family: var(--font);
+        font-size: var(--font-regular);
+        font-style: italic;
+        font-size: calc(var(--font-size)*2);
+        margin-bottom: var(--spacing);
+        display: block;
     }
 
     blockquote div {
@@ -165,6 +169,10 @@
 
     ol p {
         padding-left: 4px; 
+    }
+
+    .display {
+        font-size: calc(var(--font-size)*3);
     }
 
 
@@ -232,6 +240,11 @@
         text-align:left;
     }
 
+    .hover-growth {
+        min-width: 5em;
+    }
+
+
     /* Menus and navigation */
 
     nav ul{
@@ -275,6 +288,215 @@
 
     /* animations */
 
+    .color-changing {
+        animation: color-changing 2s infinite alternate;
+    }
+
+    .gradient-background {
+        background: linear-gradient(2deg, var(--background-blue), var(--blue));
+        background-size: 400% 400%;
+        animation: gradient-background 3s linear infinite;
+      }
+    
+      @keyframes gradient-background {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 0%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+      }
+    
+    @keyframes color-changing {
+        0% {
+          color: var(--dark-pink);
+        }
+        50% {
+          color: var(--blue);
+        }
+        100% {
+          color: var(--green);
+        }
+    }
+
+    span {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    span:first-child {
+        align-self: center;
+    }
+
+    .spiral {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        background-color: var(--background-pink);
+        overflow: hidden;
+        animation: spiral 5s linear infinite;
+      }
+    
+      @keyframes spiral {
+        0% {
+          background-color: var(--background-pink);
+          transform: rotate(0deg) translateX(0px) translateY(0px);
+        }
+        100% {
+          background-color: var(--dark-purple);
+          transform: rotate(720deg) translateX(200px) translateY(200px);
+        }
+      }
+
+      .rotate {
+        animation: rotate 5s linear infinite;
+      }
+    
+      @keyframes rotate {
+        0% {
+            transform: rotate(0deg) translateX(0px) translateY(0px);
+        }
+        100% {
+          transform: rotate(720deg) translateX(0px) translateY(0px);
+        }
+      }
+
+      .particles-background {
+        background: linear-gradient(45deg, var(--background-blue), var(--background-green));
+        background-size: 400% 400%;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        overflow:hidden ;
+        animation: particles-background 10s linear infinite;
+      }
+    
+      @keyframes particles-background {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 100% 50%;
+        }
+      }
+    
+      .particle-1 {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        background-color: var(--pink);
+        position: absolute;
+        animation: move-particle-1 5s linear infinite;
+        opacity: 0.7;
+      }
+    
+      @keyframes move-particle-1 {
+        0% {
+          transform: translateY(0) translateX(0);
+        }
+        100% {
+          transform: translateY(100px) translateX(200px);
+        }
+      }
+
+      .particle-2 {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        background-color: var(--pink);
+        position: absolute;
+        animation: move-particle-2 5s linear infinite;
+        opacity: 0.7;
+      }
+    
+      @keyframes move-particle-2 {
+        0% {
+          transform: translateY(0) translateX(0);
+        }
+        100% {
+          transform: translateY(-50px) translateX(400px);
+        }
+      }
+
+      .particle-3 {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        background-color: var(--pink);
+        position: absolute;
+        animation: move-particle-3 5s linear infinite;
+        opacity: 0.7;
+      }
+    
+      @keyframes move-particle-3 {
+        0% {
+          transform: translateY(0) translateX(0);
+        }
+        100% {
+          transform: translateY(800px) translateX(-100px);
+        }
+      }
+
+      .border-animation {
+        border: 2px dashed var(--pink);
+        border-radius: 16px;
+        background: var(--background-pink);
+        padding: 16px 24px 8px 24px; 
+        margin-bottom: var(--spacing);
+        animation: dotted-border 2s linear infinite;
+      }
+    
+      @keyframes dotted-border {
+        0% {
+          border: 2px dashed var(--pink);
+        }
+        100% {
+          border: 2px solid var(--dark-pink);
+        }
+      }
+
+      container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    
+      .text-column {
+        flex: 1;
+        padding: 20px;
+      }
+    
+      .empty-column {
+        flex: 1;
+        min-height: 1vh;
+        padding: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    
+      .scrolling-text {
+        animation: scroll-text 8s linear infinite;
+      }
+    
+      @keyframes scroll-text {
+        0% {
+          transform: translateY(-800%);
+        }
+        50% {
+          transform: translateY(800%);
+        }
+        100% {
+            transform: translateY(-800%);
+        }
+      }
 
 /* desktop */
 
@@ -471,7 +693,7 @@
 
         .sticky {
             position: sticky;
-            top: var(--spacing);
+            top: calc(var(--spacing)*3);
             z-index: 0;
         }
 
@@ -482,6 +704,12 @@
 
         .extra-padding {
             margin-top: 10rem;
+        }
+
+        /* animations */
+        .hover-growth:hover {
+            font-size: calc(var(--font-size)*2.5);
+            transition: 0.5s ease-out 100ms;
         }
 
     }
