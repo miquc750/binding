@@ -40,6 +40,25 @@
               const animationSwitcher = document.getElementById("animation-switcher");
               animationSwitcher.addEventListener("click", toggleAnimations);
             });
+
+            document.addEventListener("DOMContentLoaded", function() {
+            const toggleButton = document.getElementById("animation-toggle");
+            let animationsPaused = false;
+
+            toggleButton.addEventListener("click", function() {
+                const animateElement = document.querySelector(".animate");
+                
+                if (animationsPaused) {
+                animateElement.style.animationPlayState = "running";
+                toggleButton.textContent = "Stop animations";
+                } else {
+                animateElement.style.animationPlayState = "paused";
+                toggleButton.textContent = "Start animations";
+                }
+
+                animationsPaused = !animationsPaused;
+            });
+            });
             </script>
     </head>
 
@@ -47,7 +66,7 @@
         <nav class="header-menu">
             <ul>
                 <li><button><p><a href="https://miquc750.github.io/binding/">Binding</a></p></button></li>
-                <li><button id="animation-switcher"><p><a>Stop Animations</a></p></button></li>
+                <li><button id="animation-switcher"><p><a>Animations ON/OFF</a></p></button></li>
                 <!-- <li><button><p><a href="https://miquc750.github.io/binding/about.html">About</a></p></button></li> -->
             </ul>
         </nav>
